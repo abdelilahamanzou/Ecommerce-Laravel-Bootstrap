@@ -4,7 +4,13 @@
 <div class="card card-cascade narrower">
     <div class="table-responsive"> 
         <table class="table">
-            <thead class="blue-grey lighten-4">
+            <thead class="  lighten-4  "  >
+                <style>
+                    thead {   background-color: #6A5ACD;
+                              color:white;
+
+                    }
+                </style>
                 <tr>
                     <th>#</th>
                     <th>{{__('admin_pages.user_name')}}</th>

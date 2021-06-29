@@ -5,9 +5,9 @@ namespace App\Models\Admin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Validation\Rule;
-use Config;
-use Lang;
-use Storage;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Storage;
 
 class PublishModel extends Model
 {

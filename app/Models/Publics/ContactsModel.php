@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ContactsModel extends Model
 {
+     use db;
 
-   
+
+
+     protected $table="contacts";
 
 }

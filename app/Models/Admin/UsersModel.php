@@ -5,7 +5,8 @@ namespace App\Models\Admin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Validation\Rule;
-use Hash;
+use Illuminate\Support\Facades\Hash;
+
 
 class UsersModel extends Model
 {

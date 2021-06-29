@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use App;
-use Config;
 use Closure;
-
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Storage;
 class MultiLanguage
 {
     /**

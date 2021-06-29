@@ -7,7 +7,7 @@ use App\Models\Publics\ProductsModel;
 /**
  * This class manage shopping cart of users
  *
- * @author kiro
+ * @author ayoub
  */
 class Cart
 {

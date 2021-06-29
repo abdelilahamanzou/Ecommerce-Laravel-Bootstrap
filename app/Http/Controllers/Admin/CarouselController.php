@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Lang;
-use Config;
 use App\Models\Admin\CarouselModel;
-use Storage;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Storage;
 
 class CarouselController extends Controller
 {

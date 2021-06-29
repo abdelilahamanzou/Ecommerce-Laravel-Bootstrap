@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Publics\ProductsModel;
 use App\Models\Publics\HomeModel;
-use Lang;
+use Illuminate\Support\Facades\Lang;
+
 
 class HomeController extends Controller
 {

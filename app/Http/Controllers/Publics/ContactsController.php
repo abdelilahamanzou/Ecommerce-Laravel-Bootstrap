@@ -8,7 +8,9 @@ use App\Models\Publics\ContactsModel;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Lang;
 use PHPMailer\PHPMailer\PHPMailer;
-use Log;
+use Illuminate\Support\Facades\Log;
+
+
 
 class ContactsController extends Controller
 {

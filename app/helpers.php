@@ -1,5 +1,10 @@
 <?php
 
+
+use Illuminate\Support\Facades\Config;
+
+
+
 function lang_url($url = '/')
 {
     $supportedLocales = Config::get('app.locales');

@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\CategoriesModel;
-use Lang;
-use Config;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Lang;
+
 
 class ProductsCategoryController extends Controller
 {

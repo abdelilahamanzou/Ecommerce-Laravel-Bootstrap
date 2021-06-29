@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Lang;
 use App\Models\Admin\OrdersModel;
+use Illuminate\Support\Facades\Lang;
 
 class DashboardController extends Controller
 {

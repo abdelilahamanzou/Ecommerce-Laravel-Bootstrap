@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\ProductsModel;
-use Lang;
+use Illuminate\Support\Facades\Lang;
+
 
 class ProductsController extends Controller
 {

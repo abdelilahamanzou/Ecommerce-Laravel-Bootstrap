@@ -10,7 +10,10 @@
   | contains the "web" middleware group. Now create something great!
   |
  */
-
+use App\Http\Controllers\Account\OrderCommentController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Config;
 /* Public Routes */
 // home page
 Route::get('/', 'Publics\\HomeController@index');
@@ -134,6 +137,9 @@ Route::middleware(['auth'])->group(function () { // check for autherization
     Route::post('admin/removeGalleryImage', 'Admin\\PublishController@removeGalleryImage');
 //////////////
     Route::post('admin/changeOrderStatus', 'Admin\\OrdersController@changeStatus');
+
+  
+
 });
 
 // Authentication Routes...
@@ -165,7 +171,7 @@ Route::get('password/reset/{token}', [
     'uses' => 'Auth\ResetPasswordController@showResetForm'
 ]);
 
-/* Registration Routes. We dont need it
+ 
 Route::get('register', [
     'as' => 'register',
     'uses' => 'Auth\RegisterController@showRegistrationForm'
@@ -174,4 +180,3 @@ Route::post('register', [
     'as' => '',
     'uses' => 'Auth\RegisterController@register'
 ]);
-*/

@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\UsersModel;
-use Lang;
-use Auth;
+
+
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {

@@ -9,19 +9,15 @@
         <form action="" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <input type="hidden" name="folder" value="{{isset($product['product']->folder) ? $product['product']->folder : '0'}}">
-            <div class="card">
+            <div class="card" >
                 <div class="card-body"> 
+                    
                     <div class="form-header btn-secondary">
                         <h3>
                             {{__('admin_pages.publish_your_products')}}
                         </h3>
                     </div>
-                    <div class="md-form available-translations">
-                        <span>{{__('admin_pages.choose_locale')}}</span>
-                        @foreach ($locales as $locale)
-                        <button type="button" data-locale-change="{{$locale}}" class="btn btn-outline-secondary waves-effect locale-change @if ($currentLocale == $locale) active @endif">{{$locale}}</button>
-                        @endforeach
-                    </div>
+                    
                     <hr>
                     @foreach ($locales as $locale)
                     @php $lKey = false; if($product['translations'] != null) { $lKey = array_search($locale, array_column($product['translations'], 'locale')); } @endphp
@@ -30,17 +26,17 @@
                          <div class="md-form">
                             <i class="fa fa-font prefix grey-text"></i>
                             <input type="text" name="name[]" value="{{ $lKey !== false ? $product['translations'][$lKey]->name : '' }}" id="publishForm-name-{{$locale}}" class="form-control">
-                            <label for="publishForm-name-{{$locale}}">{{__('admin_pages.product_name')}}({{$locale}})</label>
+                            <label for="publishForm-name-{{$locale}}">{{__('admin_pages.product_name')}}</label>
                         </div>  
                         <div class="md-form">
                             <i class="fa fa-pencil prefix grey-text"></i>
                             <textarea name="description[]" type="text" id="productDescr-{{$locale}}" class="md-textarea">{{ $lKey != false ? $product['translations'][$lKey]->description : '' }}</textarea>
-                            <label for="productDescr-{{$locale}}">{{__('admin_pages.product_description')}}({{$locale}})</label>
+                            <label for="productDescr-{{$locale}}">{{__('admin_pages.product_description')}}</label>
                         </div>
                         <div class="md-form">
                             <i class="fa fa-eur prefix grey-text"></i>
                             <input type="text" name="price[]" value="{{ $lKey !== false ? $product['translations'][$lKey]->price : '' }}" id="publishForm-price-{{$locale}}" class="form-control">
-                            <label for="publishForm-price-{{$locale}}">{{__('admin_pages.product_price')}}({{$locale}})</label>
+                            <label for="publishForm-price-{{$locale}}">{{__('admin_pages.product_price')}}</label>
                         </div>  
                     </div>
                     @endforeach

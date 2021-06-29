@@ -39,12 +39,7 @@
             <div class="modal-body">
                 <form method="POST" id="formAddSlide" action="" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    <div class="md-form available-translations">
-                        <span>{{__('admin_pages.choose_locale')}}</span>
-                        @foreach ($locales as $locale)
-                        <button type="button" data-locale-change="{{$locale}}" class="btn btn-outline-secondary waves-effect locale-change @if ($currentLocale == $locale) active @endif">{{$locale}}</button>
-                        @endforeach
-                    </div>
+                   
                     <hr>
                     @foreach ($locales as $locale)
                     <input type="hidden" name="translation_order[]" value="{{$locale}}">

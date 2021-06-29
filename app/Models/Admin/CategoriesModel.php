@@ -5,8 +5,9 @@ namespace App\Models\Admin;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Validation\Rule;
-use Config;
-use Lang;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Config;
+
 
 class CategoriesModel extends Model
 {

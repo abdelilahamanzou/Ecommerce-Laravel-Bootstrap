@@ -67,11 +67,13 @@
                                         <p>{{__('admin_pages.users')}}</p>
                                     </a> 
                                 </li>
+                                
                                 <li class="bottom">
-                                    <a href="https://github.com/kirilkirkov/Shopping-Cart-Solution-Laravel" target="_blank" class="btn waves-effect waves-light">
-                                        <i class="material-icons">code</i>
-                                        <p>GET SOURCE</p>
-                                    </a> 
+                <a href="https://www.facebook.com"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.google.com/intl/fr/gmail/about/"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
                                 </li>
                             </ul>
                         </div>
@@ -93,7 +95,13 @@
                                     </ul>
                                     <form class="navbar-form navbar-right nav-bar-search" action="{{lang_url('admin/products')}}" role="search">
                                         <div class="form-group is-empty waves-light waves-effect waves-light">
-                                            <input class="form-control" placeholder="{{ __('admin_pages.search_product') }}" value="{{ Request::get('search') }}" name="search" type="text">
+                                            <input class="form-control" placeholder="{{ __('admin_pages.search_product') }}" value="{{ Request::get('search') }}" name="search" type="text" >
+                                            <style>
+                    div.form-group {   background-color: white;
+                              color:white;
+
+                    }
+                </style>
                                             <span class="material-input"></span>
                                             <span class="material-input"></span>
                                         </div>
@@ -101,19 +109,7 @@
                                             <i class="material-icons">search</i> 
                                         </button>
                                     </form>
-                                    <div class="navbar-right">
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                                                {{ app()->getLocale() }}
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                @foreach(Config::get('app.locales') as $locale)
-                                                <li><a href="{{url(getSameUrlInOtherLang($locale))}}">{{$locale}}</a></li>
-                                                @endforeach
-                                            </ul>
-                                        </div> 
-                                    </div>
+                                   
                                 </div>
                             </nav>
                             <button type="button" class="btn purple-gradient btn-sm menu-btn-xs">{{__('admin_pages.show_mine_menu')}}</button>
@@ -124,8 +120,12 @@
                     </div>
                 </div>
             </div> 
+            
             <footer>
+            
                 <div class="row"> 
+
+                
                     <div class="col-sm-9 col-md-9 col-lg-10 col-sm-offset-3 col-md-offset-3 col-lg-offset-2">
                         <ul class="nav">
                             <li>
@@ -143,12 +143,37 @@
                                     {{__('admin_pages.categories')}}
                                 </a>
                             </li>
-                            <li class="in-right">
-                                <a href="https://github.com/kirilkirkov" target="_blank">
-                                    Github <i class="fa fa-github" aria-hidden="true"></i> :: Kiril Kirkov
-                                </a>
-                            </li>
+                            <li class="header"></li>
+                                <li><a href="https://codict.ma/home">About us</a></li>
+                                <li><a href="https://codict.ma/contact">contact us</a></li>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+
+                                Copyright @2021 Codict.All rights reserved.
                         </ul>
+                       
+                          
+                       
+                        
                     </div>
                 </div>
             </footer>

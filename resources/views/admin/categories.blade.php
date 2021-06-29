@@ -3,7 +3,14 @@
 @section('content')
 <link href="{{ asset('css/bootstrap-select.min.css') }}" rel="stylesheet" /> 
 <div class="card card-cascade narrower categories"> 
-    <div class="view gradient-card-header purple-gradient table-name narrower d-flex justify-content-center align-items-center">
+    <div class="view gradient-card-heade blue-gradient table-name narrower d-flex justify-content-center align-items-center">
+    <style>
+                    thead {   background-color: #6A5ACD;
+                              color:'white';
+                              
+
+                    }
+                </style>
         <div class="left-btns">
             <button class="btn btn-outline-white btn-rounded btn-sm px-2 waves-effect waves-light" type="button" data-toggle="modal" data-target="#modalAddEditCategory">
                 <i class="fa fa-plus mt-0"></i>
@@ -95,12 +102,7 @@
             <form method="POST" action="">
                 {{ csrf_field() }}
                 <div class="modal-body mb-0">
-                    <div class="md-form available-translations">
-                        <span>{{__('admin_pages.choose_locale')}}</span>
-                        @foreach ($locales as $locale)
-                        <button type="button" data-locale-change="{{$locale}}" class="btn btn-outline-secondary waves-effect locale-change @if ($currentLocale == $locale) active @endif">{{$locale}}</button>
-                        @endforeach
-                    </div>
+                    
                     @foreach ($locales as $locale)
                     @php $lKey = false; if($category['translations'] != null) { $lKey = array_search($locale, array_column($category['translations'], 'locale')); } @endphp
                     <input type="hidden" name="translation_order[]" value="{{$locale}}">

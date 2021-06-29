@@ -6,7 +6,13 @@
     <div class="card card-cascade narrower">
         <div class="table-responsive-xs"> 
             <table class="table">
-                <thead class="blue-grey lighten-4">
+                <thead class=" lighten-4">
+                <style>
+                    thead {   background-color: #6A5ACD;
+                              color:white;
+
+                    }
+                </style>
                     <tr>
                         <th>#</th>
                         <th>{{__('admin_pages.time_created')}}</th>
@@ -105,7 +111,13 @@
                 <div class="card card-cascade narrower">
                     <div class="table-responsive-xs"> 
                         <table class="table">
-                            <thead class="blue-grey lighten-4">
+                            <thead class=" lighten-4">
+                            <style>
+                    thead {   background-color: #6A5ACD;
+                              color:white;
+
+                    }
+                </style>
                                 <tr>
                                     <th>{{__('admin_pages.time_created')}}</th>
                                     <th>{{__('admin_pages.phone')}}</th>

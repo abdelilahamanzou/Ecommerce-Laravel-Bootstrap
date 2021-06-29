@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Publics;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Publics\ProductsModel;
-use Lang;
+use Illuminate\Support\Facades\Lang;
+
 
 class ProductsController extends Controller
 {

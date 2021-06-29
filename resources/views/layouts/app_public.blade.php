@@ -19,12 +19,15 @@
     </head>
     <body>
         <header>
-            <div class="container">
+            <div class="container" >
                 <div class="row top-part">
                     <div class="col-sm-3 col-md-3">
                         <a href="{{ lang_url('/') }}" class="logo-container">
-                            <img src="{{asset('storage/ExtractiLogo.png')}}" class="img-responsive logo" alt="{{ $head_title }}">
+                            <img src="{{asset('img/logo-big_270x470.png')}}"  class="img-responsive logo"  width="300"  alt="{{ $head_title }}">
+
+              
                         </a>
+                        
                     </div>
                     <div class="col-sm-3 col-md-4">
                         <form class="search" id="products-search" action="{{lang_url('products')}}" method="GET">
@@ -39,14 +42,14 @@
                             <img src="{{ asset('img/phone.png') }}" alt="{{ $head_title }}">
                             <div class="right">
                                 <p>{{__('public_pages.phone_order')}}</p>
-                                <span>0888 888 888</span>
+                                <span>0661000000</span>
                             </div>
                             <div class="clearfix"></div>
                         </div>
                     </div>
                     <div class="col-sm-3 col-md-2">
                         <div class="user">
-                            <a href="javascript:void(0);" class="cart-button">
+                            <a href="javascript:void(0);" class="cart-button" >
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> 
                                 <span class="badge">{{!empty($cartProducts) ? count($cartProducts): 0}}</span>
                             </a>
@@ -103,24 +106,13 @@
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <a class="navbar-brand visible-xs" href="#">{{__('public_pages.menu')}}</a>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-center">
-                            <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li>
-                            <li><a href="{{ lang_url('checkout') }}">{{__('public_pages.checkout')}}</a></li>
-                            <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li>
+                    <div class="navbar-collapse collapse" >
+                        <ul class="nav navbar-nav navbar-center" >
+                            <li><a href="{{ lang_url('products') }}">{{__('public_pages.products')}}</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li><a href="{{ lang_url('checkout') }}">{{__('public_pages.checkout')}}</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li><a href="{{ lang_url('contacts') }}">{{__('public_pages.contacts')}}</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </ul>
-                        <div class="nav navbar-nav navbar-right">
-                            <div class="dropdown">
-                                <button class="btn btn-lang dropdown-toggle" type="button" data-toggle="dropdown">
-                                    {{ app()->getLocale() }}
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    @foreach(Config::get('app.locales') as $locale)
-                                    <li><a href="{{url(getSameUrlInOtherLang($locale))}}">{{$locale}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
+                       
                         </div>
                     </div>
                 </div>
@@ -129,16 +121,20 @@
         @yield('content')
         <footer>
             <div class="social">
-                <a href=""><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://web.whatsapp.com"><i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.google.com/intl/fr/gmail/about/"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div class="pages">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-6 col-sm-3">
                             <ul>
-                                <li class="header">GMMB Solutions</li>
-                                <li><a href="">About us</a></li>
-                                <li><a href="">Firm info</a></li>
+                                <li class="header">CODICT { ' }</li>
+                                <li><a href="https://codict.ma/home">About us</a></li>
+                                <li><a href="https://codict.ma/contact">contact us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -148,10 +144,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                            Copyright 2017 yourfarma.eu
+                        Copyright @2021 Codict.All rights reserved.
                         </div>
                         <div class="col-sm-6">
-                            При възникване на спор, свързан с покупка онлайн, можете да ползвате сайта ОРС
+                        
+                        Address&nbsp;&nbsp;&nbsp;&nbsp;: 05 Lot Ghannou Rdc Fath El Kheir, Témara <br>
+                        Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : contact@codict.ma<br>
+                        Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: + (212) 50 5353 36<br>
                         </div>
                     </div>
                 </div>
@@ -164,7 +163,7 @@
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="phone-user">{{__('public_pages.phone')}}</label>
-                        <input type="text" name="fast_phone" class="form-control" placeholder="0888 888 888" id="phone-user">
+                        <input type="text" name="fast_phone" class="form-control" placeholder="06 XX XX XX XX" id="phone-user">
                         <span class="error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
                     </div>
                     <div class="form-group">
@@ -203,7 +202,7 @@
             </ul>
             <a href="javascript:void(0);" class="close-xs-menu">{{__('public_pages.close_xs_menu')}}</a>
         </div> 
-        <!-- Modal After buy now button -->
+      
         <div class="modal fade" id="modalBuyBtn" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

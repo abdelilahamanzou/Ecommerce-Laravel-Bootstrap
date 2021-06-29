@@ -49,9 +49,16 @@
                                     <button type="submit" class="btn btn-primary">
                                         {{__('public_pages.login')}}
                                     </button>
+                                    
+                                    <a class="btn btn-link" href="{{ route('register') }}">
+                                        {{__('Register')}}
+                                    </a>
+                                    <br>
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{__('public_pages.forgot_pass')}}
                                     </a>
+                                    
+                                    
                                 </div>
                             </div>
                         </form>

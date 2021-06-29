@@ -76,7 +76,7 @@ return [
     |
     */
 
-    'locales' => ['bg', 'en'],
+    'locales' => ['fr', 'en'],
     
     /*
     |--------------------------------------------------------------------------
@@ -249,5 +249,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+
+
+    
 
 ];
